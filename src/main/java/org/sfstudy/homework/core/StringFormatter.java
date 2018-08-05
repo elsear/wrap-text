@@ -1,5 +1,7 @@
 package org.sfstudy.homework.core;
 
+import org.sfstudy.homework.exception.UnsupportedLineLengthException;
+
 public class StringFormatter {
     /**StringBuilder for storage current line as temp.*/
     private static StringBuilder tempSb = new StringBuilder();
@@ -32,7 +34,7 @@ public class StringFormatter {
     private static void append(String word, int maxCharsPerLine) throws Exception {
 
         /** It makes no sense to create infinity text with new line symbol only*/
-        if (maxCharsPerLine < 1) throw new Exception("Unsupported max length of line.");
+        if (maxCharsPerLine < 1) throw new UnsupportedLineLengthException("Unsupported max length of line. Please use value more then 1.");
 
         int availableTempLength = getAvailableLineLength(maxCharsPerLine);
 
