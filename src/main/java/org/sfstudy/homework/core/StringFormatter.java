@@ -1,4 +1,4 @@
-package org.sfstudy.homework;
+package org.sfstudy.homework.core;
 
 public class StringFormatter {
     /**StringBuilder for storage current line as temp.*/
